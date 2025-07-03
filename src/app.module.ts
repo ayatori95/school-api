@@ -1,18 +1,19 @@
-// src/app.module.ts
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-// Importe aqui os outros módulos da sua aplicação (UsersModule, etc.)
+import { UsersModule } from './users/user.module';
+import { ClassesModule } from './classes/classes.module';
+import { GradesModule } from './grade/grades.module';
+import { AttendancesModule } from './attendance/attendance.module';
 
 @Module({
   imports: [
-    // 1. Configure a conexão com o MongoDB aqui
     MongooseModule.forRoot('mongodb+srv://lorenacristinaac:9s0vIwigJAiyhHzo@cluster0.orjkjrs.mongodb.net/escola'),
-    
-    // 2. Adicione os outros módulos aqui depois
-    // UsersModule,
-    // ClassesModule,
+    UsersModule,
+    ClassesModule,
+    GradesModule,
+    AttendancesModule,
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -28,6 +28,7 @@ import { AttendancesModule } from './attendance/attendance.module';
     ClassesModule,
     GradesModule,
     AttendancesModule,
+    AppModule
   ],
   controllers: [AppController],
   providers: [AppService],

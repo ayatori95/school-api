@@ -7,6 +7,7 @@ import { UsersModule } from './users/user.module';
 import { ClassesModule } from './classes/classes.module';
 import { GradesModule } from './grade/grades.module';
 import { AttendancesModule } from './attendance/attendance.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -28,7 +29,7 @@ import { AttendancesModule } from './attendance/attendance.module';
     ClassesModule,
     GradesModule,
     AttendancesModule,
-    AppModule
+    AuthModule, // Importa o módulo de autenticação
   ],
   controllers: [AppController],
   providers: [AppService],

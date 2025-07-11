@@ -60,4 +60,9 @@ export class ClassesService {
     }
     return { message: 'Turma removida com sucesso.' };
   }
+
+  async findByTeacher(teacherId: string): Promise<Class[]> {
+    return this.classModel.find({ teacherId }).exec();
+  }
+
 }
